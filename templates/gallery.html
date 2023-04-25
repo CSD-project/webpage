@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Aartist.com Gallery</title>
+    <style>
+        /* Set a background color */
+        body {
+            background-color: #f2f2f2;
+        }
+        
+        /* Add some padding to the top and bottom of the page */
+        body {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        /* Add some styling to the header */
+        header {
+            position: relative; /* Add this to make the header position relative */
+            z-index: 1; /* Add this to set the z-index of the header */
+            background-color: #333;
+            color: white;
+            padding: 0px 5px 0px 5px;
+            margin: 0px 350px 0px 350px;
+            
+            text-align: center;
+            font-family: "Lucida Handwriting", "Brush Script MT", monospace;
+        }
+        
+        /* Add some styling to the main content area */
+        main {
+            position: relative; /* Add this to make the main position relative */
+            z-index: 2; /* Add this to set the z-index of the main */
+            background-color: transparent; /* Change the background color to transparent */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+            max-width: 500px;
+            padding: 30px;
+        }
+        
+        /* Add some styling to the video */
+        video {
+            position: fixed; /* Add this to make the video position fixed */
+            z-index: 0; /* Add this to set the z-index of the video */
+            top: 0;
+            left: 0;
+            max-width: 2080px;
+            max-height: 1080px;
+        }
+        
+        /* Add some styling to the images */
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="static/video1.mp4" type="video/mp4"> <!-- Replace "video.mp4" with the path to your video file -->
+    </video>
+    
+    <header>
+        <h1>Aartist.com Gallery</h1>
+    </header>
+    
+    <main>
+        {% for content in contents %}
+            <img src="https://shreyas002.s3.amazonaws.com/{{ content }}" alt="{{ content }}">
+        {% endfor %}
+    </main>
+</body>
+</html>

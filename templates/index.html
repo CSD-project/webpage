@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Image | Aartist.com</title>
+    <style>
+        /* Set background image */
+        body {
+            background-image: url('static/upload1.jpeg');
+            background-size: cover;
+        }
+        
+        /* Add some padding to the top and bottom of the page */
+        body {
+            padding-top: 0px;
+            padding-bottom: 50px;
+        }
+        
+        /* Add some styling to the header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 0px 5px 0px 5px;
+            margin: 0px 350px 0px 350px;
+            text-align: center;
+            font-family: "Lucida Handwriting", "Brush Script MT", monospace;
+        }
+        
+        /* Add some styling to the form */
+        form {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+            max-width: 500px;
+            padding: 30px;
+
+        }
+        
+        /* Add some styling to the file input */
+        input[type="file"] {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+        }
+        
+        /* Add some styling to the submit button */
+        button[type="submit"] {
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+        
+        /* Add some styling to the submit button when hovered over */
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+        
+        /* Add some styling to the error messages */
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        /* Add some styling to the success messages */
+        .success {
+            color: green;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        /* Add styling to the footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aartist.com</h1>
+    </header>
+
+    <form action="/uploaded" method="post" enctype="multipart/form-data">
+        <h2>Upload Image</h2>
+        <p>Please choose an image(.jpg/.jpeg/.png) to upload:</p>
+        <input type="file" name="filename">
+        <br>
+        <button type="submit">Upload</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Project Group P2. All rights reserved.</p>
+    </footer>
+</body>
+</html>
